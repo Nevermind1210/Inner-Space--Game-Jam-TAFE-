@@ -16,13 +16,11 @@ public class OptionMenu : MonoBehaviour
     public TMP_Dropdown resolutionDropdown;
     Resolution[] resolutions;
     public Toggle fullscreenToggle;
-    
-    [Header("Quality Set")]
-    public TMP_Dropdown qualityDropdown;
-    
-    [Header("Texture Set")]
-    public TMP_Dropdown textureDropdown;
 
+    [Header("Anti-Aliasing Set")] 
+    public TMP_Dropdown qualityDropdown;
+    public TMP_Dropdown aaDropdown;
+    
     [Header("Volume Set")]
     public Slider masterVolume;
     public Slider sfxVolumeSlider;
@@ -113,69 +111,35 @@ public class OptionMenu : MonoBehaviour
     {
         QualitySettings.masterTextureLimit = textureIndex;
         qualityDropdown.value = 6;
-        PlayerPrefs.SetInt("TextureQuality", textureIndex);
     }
-    public void SetQuality(int qualityIndex)
+    
+    public void SetAntiAliasing(int aaIndex)
     {
-        QualitySettings.SetQualityLevel(qualityIndex);
-        PlayerPrefs.SetInt("Quality", qualityIndex);
+        QualitySettings.antiAliasing = aaIndex;
+        qualityDropdown.value = 6;
     }
 
-    private void LoadSettings()
+    private void LoadSettings(int currentResolutionIndex)
     {
-        if (PlayerPrefs.HasKey("Resolution"))
-        {
-            int resIndex = PlayerPrefs.GetInt("Resolution");
-            resolutionDropdown.value = resIndex;
-            resolutionDropdown.RefreshShownValue();
-            SetResolution(resIndex);
-
-        }
-        
-        if (PlayerPrefs.HasKey("Quality"))
-        {
-            int quality = PlayerPrefs.GetInt("Quality");
-            qualityDropdown.value = quality;
-            SetTextureQuality(quality);
-        }
-
-        if (PlayerPrefs.HasKey("TextureQuality"))
-        {
-            int textureQuality = PlayerPrefs.GetInt("TextureQuality");
-            textureDropdown.value = textureQuality;
-            SetTextureQuality(textureQuality);
-        }
-
-        if (PlayerPrefs.HasKey("MasterVolume"))
-        {
-            float volume = PlayerPrefs.GetFloat("MasterVolume");
-            masterVolume.value = volume;
-            SetMasterVolume(volume);
-        }
-
-        if (PlayerPrefs.HasKey("SFXVolume"))
-        {
-            float sfxVolume = PlayerPrefs.GetFloat("SFXVolume");
-            sfxVolumeSlider.value = sfxVolume;
-            SFXVolume(sfxVolume);
-        }
-
-        if (PlayerPrefs.HasKey("Fullscreen"))
-        {
-            bool _fullscreen = true;
-            int fullscreen = PlayerPrefs.GetInt("Fullscreen");
-            if (fullscreen == 1)
-            {
-                fullscreenToggle.isOn = true;
-            }
-            else if (fullscreen == 0)
-            {
-                _fullscreen = false;
-                fullscreenToggle.isOn = false;
-            }
-
-            SetFullScreen(_fullscreen);
-
-        }
+        if (PlayerPrefs.HasKey("QualitySettingPreference"))
+            qualityDropdown.value = 
+                PlayerPrefs.GetInt("QualitySettingPreference");
+        else
+            qualityDropdown.value = 3;
+        if (PlayerPrefs.HasKey("ResolutionPreference"))
+            resolutionDropdown.value = 
+                PlayerPrefs.GetInt("ResolutionPreference");
+        else
+            resolutionDropdown.value = currentResolutionIndex;
+        if (PlayerPrefs.HasKey("AntiAliasingPreference"))
+            aaDropdown.value = 
+                PlayerPrefs.GetInt("AntiAliasingPreference");
+        else
+            aaDropdown.value = 1;
+        if (PlayerPrefs.HasKey("FullscreenPreference"))
+            Screen.fullScreen = 
+                Convert.ToBoolean(PlayerPrefs.GetInt("FullscreenPreference"));
+        else
+            Screen.fullScreen = true;
     }
 }
