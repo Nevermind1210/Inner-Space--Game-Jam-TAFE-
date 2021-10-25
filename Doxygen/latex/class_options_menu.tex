@@ -1,0 +1,330 @@
+\hypertarget{class_options_menu}{}\doxysection{Options\+Menu Class Reference}
+\label{class_options_menu}\index{OptionsMenu@{OptionsMenu}}
+Inheritance diagram for Options\+Menu\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_options_menu}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_options_menu_a3cdd7c76000cfbbb1245eee8aa6b233f}{Awake}} ()
+\item 
+void \mbox{\hyperlink{class_options_menu_a8b92b383d30672dd48f1758369745209}{Set\+Master\+Volume}} (float volume)
+\item 
+void \mbox{\hyperlink{class_options_menu_a752133edaf972c0b547d2e8be3d9354c}{SFXVolume}} (float volume)
+\begin{DoxyCompactList}\small\item\em SFXVolume setting! \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_options_menu_a2e6603c77fd7987899f23d446feba850}{Set\+Full\+Screen}} (bool is\+Fullscreen)
+\begin{DoxyCompactList}\small\item\em This function will Ternary operator the bool! \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_options_menu_aa66b7a6ec22e87d7bf4b4b4c242d1f35}{Set\+Resolution}} (int resolution\+Index)
+\begin{DoxyCompactList}\small\item\em This function will run on Awake and will grab and list resolutions that are available for the user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_options_menu_a14152259ae83ddddfb45f0723f8ac998}{Set\+Texture\+Quality}} (int texture\+Index)
+\item 
+void \mbox{\hyperlink{class_options_menu_ab17e07a4c66e345e3eb4b6cf1b3114d9}{Set\+Quality}} (int quality\+Index)
+\begin{DoxyCompactList}\small\item\em The method will be called by the dropdown Int32 method inside Unity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_options_menu_a3f60ae7b162df54afdd83a4aede68c8d}{Set\+Anti\+Aliasing}} (int aa\+Index)
+\begin{DoxyCompactList}\small\item\em Method that will find all the AA settings and place it in the Dropdown! \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_options_menu_af5e5164beae74bbe7a7587c8ebb53d3c}{Load\+Settings}} (int current\+Resolution\+Index)
+\begin{DoxyCompactList}\small\item\em Method is called inside Awake and will load inside Player\+Prefs! \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_options_menu_a150d697261279e862c8da460dbcd68e6}{Save\+Settings}} ()
+\begin{DoxyCompactList}\small\item\em This function gets called by the Unity Button and will save into P-\/p-\/player prefs! \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Audio\+Mixer \mbox{\hyperlink{class_options_menu_a4193226c86c63ce39340f40b75deae64}{audio\+Mixer}}
+\item 
+TMP\+\_\+\+Dropdown \mbox{\hyperlink{class_options_menu_a4e6dede35149703c4f09522419cef6f6}{resolution\+Dropdown}}
+\item 
+Toggle \mbox{\hyperlink{class_options_menu_a8f97375fce1e2a41cba48e0af7e33f09}{fullscreen\+Toggle}}
+\item 
+TMP\+\_\+\+Dropdown \mbox{\hyperlink{class_options_menu_a2056f92534245f59f8d7fc9b457a9057}{quality\+Dropdown}}
+\item 
+TMP\+\_\+\+Dropdown \mbox{\hyperlink{class_options_menu_a190d594ea1643b7178d1cf3688b47d25}{aa\+Dropdown}}
+\item 
+TMP\+\_\+\+Dropdown \mbox{\hyperlink{class_options_menu_a58b4424867a440ed9252af08edf6c1ce}{texture\+Dropdown}}
+\item 
+Slider \mbox{\hyperlink{class_options_menu_a88c64b95a6a2cccb017bf581aeca8944}{master\+Volume}}
+\item 
+Slider \mbox{\hyperlink{class_options_menu_af33cfcef1efeea8650d386d8ef8d85c8}{sfx\+Volume\+Slider}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_options_menu_aa40b6aa469d7f5cd372206fedfa06322}{load\+Data}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 10 of file Options\+Menu.\+cs.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_options_menu_a3cdd7c76000cfbbb1245eee8aa6b233f}\label{class_options_menu_a3cdd7c76000cfbbb1245eee8aa6b233f}} 
+\index{OptionsMenu@{OptionsMenu}!Awake@{Awake}}
+\index{Awake@{Awake}!OptionsMenu@{OptionsMenu}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Options\+Menu.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 33 of file Options\+Menu.\+cs.
+
+\mbox{\Hypertarget{class_options_menu_af5e5164beae74bbe7a7587c8ebb53d3c}\label{class_options_menu_af5e5164beae74bbe7a7587c8ebb53d3c}} 
+\index{OptionsMenu@{OptionsMenu}!LoadSettings@{LoadSettings}}
+\index{LoadSettings@{LoadSettings}!OptionsMenu@{OptionsMenu}}
+\doxysubsubsection{\texorpdfstring{LoadSettings()}{LoadSettings()}}
+{\footnotesize\ttfamily void Options\+Menu.\+Load\+Settings (\begin{DoxyParamCaption}\item[{int}]{current\+Resolution\+Index }\end{DoxyParamCaption})}
+
+
+
+Method is called inside Awake and will load inside Player\+Prefs! 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Resolution\+Index} & Self explanatory. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 190 of file Options\+Menu.\+cs.
+
+\mbox{\Hypertarget{class_options_menu_a150d697261279e862c8da460dbcd68e6}\label{class_options_menu_a150d697261279e862c8da460dbcd68e6}} 
+\index{OptionsMenu@{OptionsMenu}!SaveSettings@{SaveSettings}}
+\index{SaveSettings@{SaveSettings}!OptionsMenu@{OptionsMenu}}
+\doxysubsubsection{\texorpdfstring{SaveSettings()}{SaveSettings()}}
+{\footnotesize\ttfamily void Options\+Menu.\+Save\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function gets called by the Unity Button and will save into P-\/p-\/player prefs! 
+
+
+
+Definition at line 222 of file Options\+Menu.\+cs.
+
+\mbox{\Hypertarget{class_options_menu_a3f60ae7b162df54afdd83a4aede68c8d}\label{class_options_menu_a3f60ae7b162df54afdd83a4aede68c8d}} 
+\index{OptionsMenu@{OptionsMenu}!SetAntiAliasing@{SetAntiAliasing}}
+\index{SetAntiAliasing@{SetAntiAliasing}!OptionsMenu@{OptionsMenu}}
+\doxysubsubsection{\texorpdfstring{SetAntiAliasing()}{SetAntiAliasing()}}
+{\footnotesize\ttfamily void Options\+Menu.\+Set\+Anti\+Aliasing (\begin{DoxyParamCaption}\item[{int}]{aa\+Index }\end{DoxyParamCaption})}
+
+
+
+Method that will find all the AA settings and place it in the Dropdown! 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aa\+Index} & How many AA settings \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 180 of file Options\+Menu.\+cs.
+
+\mbox{\Hypertarget{class_options_menu_a2e6603c77fd7987899f23d446feba850}\label{class_options_menu_a2e6603c77fd7987899f23d446feba850}} 
+\index{OptionsMenu@{OptionsMenu}!SetFullScreen@{SetFullScreen}}
+\index{SetFullScreen@{SetFullScreen}!OptionsMenu@{OptionsMenu}}
+\doxysubsubsection{\texorpdfstring{SetFullScreen()}{SetFullScreen()}}
+{\footnotesize\ttfamily void Options\+Menu.\+Set\+Full\+Screen (\begin{DoxyParamCaption}\item[{bool}]{is\+Fullscreen }\end{DoxyParamCaption})}
+
+
+
+This function will Ternary operator the bool! 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Fullscreen} & This is what will decide the game will be fullscreened or not\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 113 of file Options\+Menu.\+cs.
+
+\mbox{\Hypertarget{class_options_menu_a8b92b383d30672dd48f1758369745209}\label{class_options_menu_a8b92b383d30672dd48f1758369745209}} 
+\index{OptionsMenu@{OptionsMenu}!SetMasterVolume@{SetMasterVolume}}
+\index{SetMasterVolume@{SetMasterVolume}!OptionsMenu@{OptionsMenu}}
+\doxysubsubsection{\texorpdfstring{SetMasterVolume()}{SetMasterVolume()}}
+{\footnotesize\ttfamily void Options\+Menu.\+Set\+Master\+Volume (\begin{DoxyParamCaption}\item[{float}]{volume }\end{DoxyParamCaption})}
+
+
+
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em volume} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 78 of file Options\+Menu.\+cs.
+
+\mbox{\Hypertarget{class_options_menu_ab17e07a4c66e345e3eb4b6cf1b3114d9}\label{class_options_menu_ab17e07a4c66e345e3eb4b6cf1b3114d9}} 
+\index{OptionsMenu@{OptionsMenu}!SetQuality@{SetQuality}}
+\index{SetQuality@{SetQuality}!OptionsMenu@{OptionsMenu}}
+\doxysubsubsection{\texorpdfstring{SetQuality()}{SetQuality()}}
+{\footnotesize\ttfamily void Options\+Menu.\+Set\+Quality (\begin{DoxyParamCaption}\item[{int}]{quality\+Index }\end{DoxyParamCaption})}
+
+
+
+The method will be called by the dropdown Int32 method inside Unity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em quality\+Index} & How much quality exists!\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 140 of file Options\+Menu.\+cs.
+
+\mbox{\Hypertarget{class_options_menu_aa66b7a6ec22e87d7bf4b4b4c242d1f35}\label{class_options_menu_aa66b7a6ec22e87d7bf4b4b4c242d1f35}} 
+\index{OptionsMenu@{OptionsMenu}!SetResolution@{SetResolution}}
+\index{SetResolution@{SetResolution}!OptionsMenu@{OptionsMenu}}
+\doxysubsubsection{\texorpdfstring{SetResolution()}{SetResolution()}}
+{\footnotesize\ttfamily void Options\+Menu.\+Set\+Resolution (\begin{DoxyParamCaption}\item[{int}]{resolution\+Index }\end{DoxyParamCaption})}
+
+
+
+This function will run on Awake and will grab and list resolutions that are available for the user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em resolution\+Index} & How much resolution does your PC can output (Monitor Dependant/\+Unity) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 123 of file Options\+Menu.\+cs.
+
+\mbox{\Hypertarget{class_options_menu_a14152259ae83ddddfb45f0723f8ac998}\label{class_options_menu_a14152259ae83ddddfb45f0723f8ac998}} 
+\index{OptionsMenu@{OptionsMenu}!SetTextureQuality@{SetTextureQuality}}
+\index{SetTextureQuality@{SetTextureQuality}!OptionsMenu@{OptionsMenu}}
+\doxysubsubsection{\texorpdfstring{SetTextureQuality()}{SetTextureQuality()}}
+{\footnotesize\ttfamily void Options\+Menu.\+Set\+Texture\+Quality (\begin{DoxyParamCaption}\item[{int}]{texture\+Index }\end{DoxyParamCaption})}
+
+
+
+Definition at line 130 of file Options\+Menu.\+cs.
+
+\mbox{\Hypertarget{class_options_menu_a752133edaf972c0b547d2e8be3d9354c}\label{class_options_menu_a752133edaf972c0b547d2e8be3d9354c}} 
+\index{OptionsMenu@{OptionsMenu}!SFXVolume@{SFXVolume}}
+\index{SFXVolume@{SFXVolume}!OptionsMenu@{OptionsMenu}}
+\doxysubsubsection{\texorpdfstring{SFXVolume()}{SFXVolume()}}
+{\footnotesize\ttfamily void Options\+Menu.\+SFXVolume (\begin{DoxyParamCaption}\item[{float}]{volume }\end{DoxyParamCaption})}
+
+
+
+SFXVolume setting! 
+
+
+\begin{DoxyParams}{Parameters}
+{\em volume} & for decibel point value\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 89 of file Options\+Menu.\+cs.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_options_menu_a190d594ea1643b7178d1cf3688b47d25}\label{class_options_menu_a190d594ea1643b7178d1cf3688b47d25}} 
+\index{OptionsMenu@{OptionsMenu}!aaDropdown@{aaDropdown}}
+\index{aaDropdown@{aaDropdown}!OptionsMenu@{OptionsMenu}}
+\doxysubsubsection{\texorpdfstring{aaDropdown}{aaDropdown}}
+{\footnotesize\ttfamily TMP\+\_\+\+Dropdown Options\+Menu.\+aa\+Dropdown}
+
+
+
+Definition at line 22 of file Options\+Menu.\+cs.
+
+\mbox{\Hypertarget{class_options_menu_a4193226c86c63ce39340f40b75deae64}\label{class_options_menu_a4193226c86c63ce39340f40b75deae64}} 
+\index{OptionsMenu@{OptionsMenu}!audioMixer@{audioMixer}}
+\index{audioMixer@{audioMixer}!OptionsMenu@{OptionsMenu}}
+\doxysubsubsection{\texorpdfstring{audioMixer}{audioMixer}}
+{\footnotesize\ttfamily Audio\+Mixer Options\+Menu.\+audio\+Mixer}
+
+
+
+Definition at line 13 of file Options\+Menu.\+cs.
+
+\mbox{\Hypertarget{class_options_menu_a8f97375fce1e2a41cba48e0af7e33f09}\label{class_options_menu_a8f97375fce1e2a41cba48e0af7e33f09}} 
+\index{OptionsMenu@{OptionsMenu}!fullscreenToggle@{fullscreenToggle}}
+\index{fullscreenToggle@{fullscreenToggle}!OptionsMenu@{OptionsMenu}}
+\doxysubsubsection{\texorpdfstring{fullscreenToggle}{fullscreenToggle}}
+{\footnotesize\ttfamily Toggle Options\+Menu.\+fullscreen\+Toggle}
+
+
+
+Definition at line 18 of file Options\+Menu.\+cs.
+
+\mbox{\Hypertarget{class_options_menu_aa40b6aa469d7f5cd372206fedfa06322}\label{class_options_menu_aa40b6aa469d7f5cd372206fedfa06322}} 
+\index{OptionsMenu@{OptionsMenu}!loadData@{loadData}}
+\index{loadData@{loadData}!OptionsMenu@{OptionsMenu}}
+\doxysubsubsection{\texorpdfstring{loadData}{loadData}}
+{\footnotesize\ttfamily bool Options\+Menu.\+load\+Data = false\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 31 of file Options\+Menu.\+cs.
+
+\mbox{\Hypertarget{class_options_menu_a88c64b95a6a2cccb017bf581aeca8944}\label{class_options_menu_a88c64b95a6a2cccb017bf581aeca8944}} 
+\index{OptionsMenu@{OptionsMenu}!masterVolume@{masterVolume}}
+\index{masterVolume@{masterVolume}!OptionsMenu@{OptionsMenu}}
+\doxysubsubsection{\texorpdfstring{masterVolume}{masterVolume}}
+{\footnotesize\ttfamily Slider Options\+Menu.\+master\+Volume}
+
+
+
+Definition at line 26 of file Options\+Menu.\+cs.
+
+\mbox{\Hypertarget{class_options_menu_a2056f92534245f59f8d7fc9b457a9057}\label{class_options_menu_a2056f92534245f59f8d7fc9b457a9057}} 
+\index{OptionsMenu@{OptionsMenu}!qualityDropdown@{qualityDropdown}}
+\index{qualityDropdown@{qualityDropdown}!OptionsMenu@{OptionsMenu}}
+\doxysubsubsection{\texorpdfstring{qualityDropdown}{qualityDropdown}}
+{\footnotesize\ttfamily TMP\+\_\+\+Dropdown Options\+Menu.\+quality\+Dropdown}
+
+
+
+Definition at line 21 of file Options\+Menu.\+cs.
+
+\mbox{\Hypertarget{class_options_menu_a4e6dede35149703c4f09522419cef6f6}\label{class_options_menu_a4e6dede35149703c4f09522419cef6f6}} 
+\index{OptionsMenu@{OptionsMenu}!resolutionDropdown@{resolutionDropdown}}
+\index{resolutionDropdown@{resolutionDropdown}!OptionsMenu@{OptionsMenu}}
+\doxysubsubsection{\texorpdfstring{resolutionDropdown}{resolutionDropdown}}
+{\footnotesize\ttfamily TMP\+\_\+\+Dropdown Options\+Menu.\+resolution\+Dropdown}
+
+
+
+Definition at line 16 of file Options\+Menu.\+cs.
+
+\mbox{\Hypertarget{class_options_menu_af33cfcef1efeea8650d386d8ef8d85c8}\label{class_options_menu_af33cfcef1efeea8650d386d8ef8d85c8}} 
+\index{OptionsMenu@{OptionsMenu}!sfxVolumeSlider@{sfxVolumeSlider}}
+\index{sfxVolumeSlider@{sfxVolumeSlider}!OptionsMenu@{OptionsMenu}}
+\doxysubsubsection{\texorpdfstring{sfxVolumeSlider}{sfxVolumeSlider}}
+{\footnotesize\ttfamily Slider Options\+Menu.\+sfx\+Volume\+Slider}
+
+
+
+Definition at line 27 of file Options\+Menu.\+cs.
+
+\mbox{\Hypertarget{class_options_menu_a58b4424867a440ed9252af08edf6c1ce}\label{class_options_menu_a58b4424867a440ed9252af08edf6c1ce}} 
+\index{OptionsMenu@{OptionsMenu}!textureDropdown@{textureDropdown}}
+\index{textureDropdown@{textureDropdown}!OptionsMenu@{OptionsMenu}}
+\doxysubsubsection{\texorpdfstring{textureDropdown}{textureDropdown}}
+{\footnotesize\ttfamily TMP\+\_\+\+Dropdown Options\+Menu.\+texture\+Dropdown}
+
+
+
+Definition at line 23 of file Options\+Menu.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+Unity Projects/\+Inner-\/\+Space-\/-\/\+Game-\/\+Jam-\/\+TAFE-\//\+Assets/\+Scripts/\mbox{\hyperlink{_options_menu_8cs}{Options\+Menu.\+cs}}\end{DoxyCompactItemize}

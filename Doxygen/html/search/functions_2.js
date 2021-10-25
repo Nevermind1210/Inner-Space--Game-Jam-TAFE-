@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quitgame_57',['QuitGame',['../class_main_menu.html#a485db7cf60c0b93ecc87b9273bcce78b',1,'MainMenu']]]
+  ['playgame_61',['PlayGame',['../class_main_menu.html#a11d7e3cd6b90cf59659e03e830e02db5',1,'MainMenu']]]
 ];

@@ -17,7 +17,7 @@ namespace DefaultNamespace
         }
 
         /// <summary>
-        /// This is a function that will instantiate the asteriods.
+        /// This is a function that will instantiate the asteroids.
         /// </summary>
         void InstanitateAsteriods()
         {

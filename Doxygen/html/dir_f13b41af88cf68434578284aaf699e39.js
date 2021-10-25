@@ -8,7 +8,7 @@ var dir_f13b41af88cf68434578284aaf699e39 =
       [ "MainMenu", "class_main_menu.html", "class_main_menu" ]
     ] ],
     [ "OptionsMenu.cs", "_options_menu_8cs.html", [
-      [ "OptionMenu", "class_option_menu.html", "class_option_menu" ]
+      [ "OptionsMenu", "class_options_menu.html", "class_options_menu" ]
     ] ],
     [ "RandomRotator.cs", "_random_rotator_8cs.html", [
       [ "RandomRotator", "class_random_rotator.html", null ]

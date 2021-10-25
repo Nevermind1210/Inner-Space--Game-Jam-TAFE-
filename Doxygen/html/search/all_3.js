@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fullscreentoggle_11',['fullscreenToggle',['../class_option_menu.html#a3976c4dde68be3f622f1de9b5b499717',1,'OptionMenu']]]
+  ['fullscreentoggle_12',['fullscreenToggle',['../class_options_menu.html#a8f97375fce1e2a41cba48e0af7e33f09',1,'OptionsMenu']]]
 ];

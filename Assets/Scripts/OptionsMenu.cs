@@ -71,6 +71,10 @@ public class OptionsMenu : MonoBehaviour
     
     #region Volume Stuff
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="volume"></param>
     public void SetMasterVolume(float volume)
     {
         PlayerPrefs.SetFloat("MasterVolume", volume);
@@ -78,6 +82,10 @@ public class OptionsMenu : MonoBehaviour
         audioMixer.SetFloat("masterVolume",volume);
     }
 
+    /// <summary>
+    /// SFXVolume setting!
+    /// </summary>
+    /// <param name="volume"> for decibel point value</param>
     public void SFXVolume(float volume)
     {
         PlayerPrefs.SetFloat("SFXVolume",volume);
@@ -85,6 +93,11 @@ public class OptionsMenu : MonoBehaviour
         audioMixer.SetFloat("SFXVolume", volume);
     }
 
+    /// <summary>
+    /// Volume setting!
+    /// </summary>
+    /// <param name="_value"></param>
+    /// <returns>This will return the ACCURATE decibel amount for volume.</returns>
     private float VolumeRemapping(float _value)
     {
         return -40 + (_value - 0) * (20 - -40) / (1 - 0);
@@ -93,12 +106,20 @@ public class OptionsMenu : MonoBehaviour
     #endregion
    
 
+    /// <summary>
+    /// This function will Ternary operator the bool! 
+    /// </summary>
+    /// <param name="isFullscreen"> This is what will decide the game will be fullscreened or not</param>
     public void SetFullScreen(bool isFullscreen)
     {
         PlayerPrefs.SetInt("Fullscreen",(isFullscreen ? 1 : 0));
         Screen.fullScreen = isFullscreen;
     }
 
+    /// <summary>
+    /// This function will run on Awake and will grab and list resolutions that are available for the user.
+    /// </summary>
+    /// <param name="resolutionIndex"> How much resolution does your PC can output (Monitor Dependant/Unity) </param>
     public void SetResolution(int resolutionIndex)
     {
         PlayerPrefs.SetInt("Resolution", resolutionIndex);
@@ -112,6 +133,10 @@ public class OptionsMenu : MonoBehaviour
         qualityDropdown.value = 6;
     }
     
+    /// <summary>
+    ///  The method will be called by the dropdown Int32 method inside Unity.
+    /// </summary>
+    /// <param name="qualityIndex"> How much quality exists!</param>
     public void SetQuality(int qualityIndex)
     {
         if (qualityIndex != 6) // if the user is not using 
@@ -148,12 +173,20 @@ public class OptionsMenu : MonoBehaviour
         qualityDropdown.value = qualityIndex;
     }
     
+    /// <summary>
+    /// Method that will find all the AA settings and place it in the Dropdown!
+    /// </summary>
+    /// <param name="aaIndex"> How many AA settings </param>
     public void SetAntiAliasing(int aaIndex)
     {
         QualitySettings.antiAliasing = aaIndex;
         qualityDropdown.value = 6;
     }
 
+    /// <summary>
+    /// Method is called inside Awake and will load inside PlayerPrefs!
+    /// </summary>
+    /// <param name="currentResolutionIndex"> Self explanatory. </param>
     public void LoadSettings(int currentResolutionIndex)
     {
         if (PlayerPrefs.HasKey("QualitySettingPreference"))
@@ -183,7 +216,9 @@ public class OptionsMenu : MonoBehaviour
             Screen.fullScreen = true;
     }
     
-    
+    /// <summary>
+    /// This function gets called by the Unity Button and will save into P-p-player prefs!
+    /// </summary>
     public void SaveSettings()
     {
         PlayerPrefs.SetInt("QualitySettingPreference", 

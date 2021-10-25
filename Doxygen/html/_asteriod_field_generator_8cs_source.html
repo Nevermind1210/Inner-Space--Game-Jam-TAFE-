@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Inner Space (Game Jam): Assets/Scripts/AsteriodFieldGenerator.cs Source File</title>
+<title>Inner Space (Game Jam): F:/Unity Projects/Inner-Space--Game-Jam-TAFE-/Assets/Scripts/AsteriodFieldGenerator.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Inner Space (Game Jam)
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.0.1</span>
    </div>
    <div id="projectbrief">We are Lost In Space!</div>
   </td>
@@ -102,22 +102,19 @@ $(document).ready(function(){initNavTree('_asteriod_field_generator_8cs_source.h
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        [SerializeField] <span class="keyword">private</span> GameObject player;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> Start()</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            InstanitateAsteriods();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            InstanitateAsteriods(); <span class="comment">// This will run when start.</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        }</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">void</span> InstanitateAsteriods()</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; asteriodCount; i++)</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                Transform newAsteriod = Instantiate(asteriodPrefab, <a class="code" href="_asteriod_field_generator_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a>.insideUnitSphere * fieldRadius, <a class="code" href="_asteriod_field_generator_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a>.rotation);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                newAsteriod.localScale = newAsteriod.localScale * <a class="code" href="_asteriod_field_generator_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a>.Range(0.5f, 5);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            }</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> Update()</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordtype">void</span> InstanitateAsteriods()</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="comment">// This forloop will look at the count</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; asteriodCount; i++)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                Transform newAsteriod = Instantiate(asteriodPrefab, <a class="code" href="_asteriod_field_generator_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a>.insideUnitSphere * fieldRadius, <a class="code" href="_asteriod_field_generator_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a>.rotation);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                newAsteriod.localScale = newAsteriod.localScale * <a class="code" href="_asteriod_field_generator_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a>.Range(0.5f, 5);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
 <div class="ttc" id="a_asteriod_field_generator_8cs_html_a832e8f52fca5a678819ec96269dcb532"><div class="ttname"><a href="_asteriod_field_generator_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a></div><div class="ttdeci">UnityEngine.Random Random</div><div class="ttdef"><b>Definition:</b> <a href="_asteriod_field_generator_8cs_source.html#l00004">AsteriodFieldGenerator.cs:4</a></div></div>

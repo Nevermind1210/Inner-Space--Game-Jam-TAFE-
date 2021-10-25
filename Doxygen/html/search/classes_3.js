@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['optionmenu_45',['OptionMenu',['../class_option_menu.html',1,'']]]
+  ['optionsmenu_49',['OptionsMenu',['../class_options_menu.html',1,'']]]
 ];

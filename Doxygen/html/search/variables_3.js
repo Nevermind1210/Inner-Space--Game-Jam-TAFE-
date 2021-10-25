@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['loaddata_70',['loadData',['../class_option_menu.html#abfc7c768180bd1d5bf8f70b9d3e9e2fd',1,'OptionMenu']]]
+  ['loaddata_78',['loadData',['../class_options_menu.html#aa40b6aa469d7f5cd372206fedfa06322',1,'OptionsMenu']]]
 ];
