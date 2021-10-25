@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-public class OptionMenu : MonoBehaviour
+public class OptionsMenu : MonoBehaviour
 {
     [Header("Audio Stuff")]
     public AudioMixer audioMixer;
@@ -17,9 +17,10 @@ public class OptionMenu : MonoBehaviour
     Resolution[] resolutions;
     public Toggle fullscreenToggle;
 
-    [Header("Anti-Aliasing Set")] 
+    [Header("Graphic Set")] 
     public TMP_Dropdown qualityDropdown;
     public TMP_Dropdown aaDropdown;
+    public TMP_Dropdown textureDropdown;
     
     [Header("Volume Set")]
     public Slider masterVolume;
@@ -62,14 +63,12 @@ public class OptionMenu : MonoBehaviour
             resolutionDropdown.value = currentResolutionIndex;
             resolutionDropdown.RefreshShownValue();
         }
+        
+        LoadSettings(currentResolutionIndex);
         #endregion
     }
-
-    private void Start()
-    {
-        LoadSettings();
-    }
-
+    
+    
     #region Volume Stuff
 
     public void SetMasterVolume(float volume)
@@ -113,13 +112,49 @@ public class OptionMenu : MonoBehaviour
         qualityDropdown.value = 6;
     }
     
+    public void SetQuality(int qualityIndex)
+    {
+        if (qualityIndex != 6) // if the user is not using 
+            //any of the presets
+            QualitySettings.SetQualityLevel(qualityIndex);
+        switch (qualityIndex)
+        {
+            case 0: // quality level - very low
+                textureDropdown.value = 3;
+                aaDropdown.value = 0;
+                break;
+            case 1: // quality level - low
+                textureDropdown.value = 2;
+                aaDropdown.value = 0;
+                break;
+            case 2: // quality level - medium
+                textureDropdown.value = 1;
+                aaDropdown.value = 0;
+                break;
+            case 3: // quality level - high
+                textureDropdown.value = 0;
+                aaDropdown.value = 0;
+                break;
+            case 4: // quality level - very high
+                textureDropdown.value = 0;
+                aaDropdown.value = 1;
+                break;
+            case 5: // quality level - ultra
+                textureDropdown.value = 0;
+                aaDropdown.value = 2;
+                break;
+        }
+        
+        qualityDropdown.value = qualityIndex;
+    }
+    
     public void SetAntiAliasing(int aaIndex)
     {
         QualitySettings.antiAliasing = aaIndex;
         qualityDropdown.value = 6;
     }
 
-    private void LoadSettings(int currentResolutionIndex)
+    public void LoadSettings(int currentResolutionIndex)
     {
         if (PlayerPrefs.HasKey("QualitySettingPreference"))
             qualityDropdown.value = 
@@ -131,6 +166,11 @@ public class OptionMenu : MonoBehaviour
                 PlayerPrefs.GetInt("ResolutionPreference");
         else
             resolutionDropdown.value = currentResolutionIndex;
+        if (PlayerPrefs.HasKey("TextureQualityPreference"))
+            textureDropdown.value = 
+                PlayerPrefs.GetInt("TextureQualityPreference");
+        else
+            textureDropdown.value = 0;
         if (PlayerPrefs.HasKey("AntiAliasingPreference"))
             aaDropdown.value = 
                 PlayerPrefs.GetInt("AntiAliasingPreference");
@@ -141,5 +181,22 @@ public class OptionMenu : MonoBehaviour
                 Convert.ToBoolean(PlayerPrefs.GetInt("FullscreenPreference"));
         else
             Screen.fullScreen = true;
+    }
+    
+    
+    public void SaveSettings()
+    {
+        PlayerPrefs.SetInt("QualitySettingPreference", 
+            qualityDropdown.value);
+        PlayerPrefs.SetInt("ResolutionPreference", 
+            resolutionDropdown.value);
+        PlayerPrefs.SetInt("TextureQualityPreference", 
+            textureDropdown.value);
+        PlayerPrefs.SetInt("AntiAliasingPreference", 
+            aaDropdown.value);
+        PlayerPrefs.SetInt("FullscreenPreference", 
+            Convert.ToInt32(Screen.fullScreen));
+        PlayerPrefs.SetFloat("VolumePreference", 
+            currentVolume); 
     }
 }
